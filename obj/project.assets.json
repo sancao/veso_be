@@ -11507,11 +11507,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\dot-net-core\\veso_be\\veso_be\\veso_be.csproj",
+      "projectUniqueName": "D:\\Code\\dot-net-core\\veso_be\\veso_be.csproj",
       "projectName": "veso_be",
-      "projectPath": "D:\\Code\\dot-net-core\\veso_be\\veso_be\\veso_be.csproj",
+      "projectPath": "D:\\Code\\dot-net-core\\veso_be\\veso_be.csproj",
       "packagesPath": "C:\\Users\\Win 7\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\dot-net-core\\veso_be\\veso_be\\obj\\",
+      "outputPath": "D:\\Code\\dot-net-core\\veso_be\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
