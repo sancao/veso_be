@@ -95,8 +95,8 @@ namespace veso_be.Services
             }
  
             // update user properties
-            user.FirstName = userParam.FirstName;
-            user.LastName = userParam.LastName;
+            // user.FirstName = userParam.FirstName;
+            // user.LastName = userParam.LastName;
             user.Username = userParam.Username;
  
             // update password if it was entered

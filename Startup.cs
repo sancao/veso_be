@@ -6,12 +6,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using veso_be.Helpers;
 using veso_be.Services;
+using veso_be.Entities;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using AspNetCore.RouteAnalyzer;
+using veso_be.Repositories;
 
 namespace veso_be
 {
@@ -28,7 +30,12 @@ namespace veso_be
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddDbContext<DataContext>(x => x.UseInMemoryDatabase("TestDb"));
+            // string connectionString="Server=127.0.0.1; Port=3306; Database=dentist_sa; Uid=admin; Pwd=admin;";
+            // string connectionString=Configuration.GetConnectionString("BaseEstados");
+            // services.AddTransient<EstadosDAO>();
+            services.AddTransient<IUserRepository, UserRepository>
+            (provider => new UserRepository(Configuration));
+            
             services.AddMvc();
             services.AddAutoMapper();
             services.AddRouteAnalyzer(); // Add
@@ -72,9 +79,6 @@ namespace veso_be
                     ValidateAudience = false
                 };
             });
- 
-            // configure DI for application services
-            services.AddScoped<IUserService, UserService>();
         }
  
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
