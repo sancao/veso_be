@@ -46,8 +46,8 @@ namespace veso_be.Repositories
                     return null;
 
                 // check if password is correct
-                if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
-                    return null;
+                // if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
+                //     return null;
 
                 // authentication successful
                 return user;
